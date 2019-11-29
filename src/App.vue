@@ -17,17 +17,14 @@
 import {setTheme} from '@/assets/js/setTheme.js';
 export default {
   name: 'app',
+  created(){
+    document.body.className = localStorage.getItem('theme') ? localStorage.getItem('theme'): ''
+  },
   mounted() {
   },
-  // created () {
-  //   let font_link = document.createElement('link')
-  //   font_link.setAttribute('rel','stylesheet')
-  //   font_link.setAttribute('type','text/css')
-  //   font_link.setAttribute('href','@/assets/theme/dark/element-variables.scss')
-  //   document.head.appendChild(font_link)
-  // },
   methods: {
     changeTheme () {
+      localStorage.setItem('theme', 'dark')
       setTheme()
     }
   },
