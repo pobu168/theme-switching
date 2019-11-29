@@ -7,6 +7,13 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>theme-switching</title>
   </head>
+  <script>
+    window.theme = 'dark'
+    window.onload=function()//用window的onload事件，窗体加载完毕的时候
+      {
+        console.log(window.theme)
+      }
+  </script>
   <body>
     <noscript>
       <strong>We're sorry but theme-switching doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
